@@ -26,10 +26,10 @@ slidenumbers: true slide-transition: true
 
 ---
 
-- Future proofing 
-- Safety 
+- Future proofing
+- Safety
 - Productivity with features like generics, etc
-- Security 
+- Security
 
 ^ And until what point
 ^ being able to use latest version of libraries
@@ -41,7 +41,7 @@ slidenumbers: true slide-transition: true
 
 ---
 
-# [fit] 1. Modernize Objective-C
+# [fit] Modernize Objective-C
 
 ^ Models in particular
 ^ ARC, etc
@@ -100,7 +100,7 @@ let num: Int? = nil
 5. Migrate lifecycle methods and properties
 6. Update storyboard
 
-^ Separate commits for each method is great for when 
+^ Separate commits for each method is great for when
 
 ---
 
