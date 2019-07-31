@@ -14,11 +14,16 @@ slidenumbers: true slide-transition: true
 - Strengths: English
 - Hobbies: Collecting Xcode versions
 
+^ From the US
+^ Pepabo's just down the street
+^ minne, Japan's largest handmade marketplace
+
 ---
 
 # [fit] 30,000 lines of Obj-C
 
 ^ 1.5 years
+^ 3-4 people
 
 ---
 
@@ -31,8 +36,8 @@ slidenumbers: true slide-transition: true
 - Productivity with features like generics, etc
 - Security
 
-^ And until what point
-^ being able to use latest version of libraries
+^ And until what point: just enough to be useful, 92% in our case
+^ Security: being able to use latest version of libraries
 ^ SwiftUI, etc
 
 ---
@@ -44,7 +49,7 @@ slidenumbers: true slide-transition: true
 # [fit] Modernize Objective-C
 
 ^ Models in particular
-^ ARC, etc
+^ You're using ARC, right?
 ^ Nullability Annotations and Lightweight Generics
 ^ Why, how
 
@@ -56,6 +61,9 @@ slidenumbers: true slide-transition: true
 @property (nonatomic, nonnull) MIAPIClient *client;
 @property (nonatomic, nullable) MICoupon *coupon;
 ```
+
+^ Review of lightweight generics
+^ No compiler checks w/o annotations
 
 ---
 
@@ -82,6 +90,7 @@ let num: Int? = nil
 
 ^ Convert your business logic
 ^ Calling Swift from obj-c is painful because of feature differences like enums, generics, structs, etc
+^ Calling modern obj-c is much less painful
 
 ---
 
@@ -100,7 +109,8 @@ let num: Int? = nil
 5. Migrate lifecycle methods and properties
 6. Update storyboard
 
-^ Separate commits for each method is great for when
+^ Separate commits for each method is great for when there's a bug
+^ Being able to compile and run your app w/ each commit is best practice
 
 ---
 
@@ -114,6 +124,8 @@ let num: Int? = nil
 - Things like major renaming should be in separate PRs to make review easier
 - Set goals and monitor progress with tools like *tokei*
 
+^ Trying to make the logic significantly different while migrating makes reviews harder and makes it difficult to prevent bugs from entering
+^ Running relevant tests on each commit allows for peace of mind
 ^ "brew install tokei", faster than cloc
 
 ---
@@ -126,3 +138,7 @@ let num: Int? = nil
 - Use Xcode Preview now
 - Fewer dependencies
 - Swift 😉
+
+^ Talked w/ Apple engineers about this
+^ Xcode Preview works with UIKit too, just need to make views/VCs conform to a protocol
+^ Dependencies aren't bad, but unmaintained ones are a burden
